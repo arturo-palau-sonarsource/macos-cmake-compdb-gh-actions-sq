@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: linux
+    runs-on: ubuntu-latest
     env:
       SONAR_SCANNER_VERSION: 4.6.1.2450 # Find the latest version in the "macOS" link on this page:
                                         # https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
