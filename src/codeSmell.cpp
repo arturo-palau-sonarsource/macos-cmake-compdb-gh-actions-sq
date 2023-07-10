@@ -9,8 +9,8 @@ void processInput(int value) {
         // Process the input value
         std::cout << "Processing input: " << value << std::endl;
     } catch (const std::exception& e) {
-        // Handle the exception appropriately
-        std::cerr << "Exception caught in processInput: " << e.what() << std::endl;
+        // Rethrow the caught exception without doing anything
+        throw e;
     }
 }
 
@@ -21,7 +21,7 @@ int main() {
         std::cin >> input;
         processInput(input);
     } catch (const std::exception& e) {
-        std::cerr << "Exception caught in main: " << e.what() << std::endl;
+        std::cerr << "Exception caught: " << e.what() << std::endl;
     }
     return 0;
 }
